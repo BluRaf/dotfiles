@@ -1,0 +1,41 @@
+!------------------!
+! Pastel Thoughts  !
+! (c) BluRaf, 2018 !
+!------------------!
+
+! special
+*.foreground:   #cccccc
+*.background:   #111111
+*.cursorColor:  #cccccc
+
+! black
+*.color0:       #000000
+*.color8:       #333333
+
+! red
+*.color1:       #ca130f
+*.color9:       #fd1813
+
+! green
+*.color2:       #0c813d
+*.color10:      #0fa14c
+
+! yellow
+*.color3:       #cb8948
+*.color11:      #feab5a
+
+! blue
+*.color4:       #195a9a
+*.color12:      #1f70c1
+
+! magenta
+*.color5:       #cb659e
+*.color13:      #fe7ec6
+
+! cyan
+*.color6:       #24a2aa
+*.color14:      #2dcbd4
+
+! white
+*.color7:       #cccccc
+*.color15:      #ffffff
