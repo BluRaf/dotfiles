@@ -19,7 +19,7 @@ usercolor=$colorrst
 [ $usercolorchar = "r" ] && usercolor=$(tput setaf 1)
 [ $usercolorchar = "b" ] && usercolor=$(tput setaf 4)
 
-PS1='[\[$?\]] \[${usercolor}\]\u\[${colorrst}\]!\l@\h:\w$(parse_git_branch) \$ '
+PS1='[${?}] \[${usercolor}\]\u\[${colorrst}\]!\l@\h:\w$(parse_git_branch) \$ '
 
 
 # Basic aliases
