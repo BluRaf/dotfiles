@@ -23,3 +23,4 @@ fi
 
 # add ESP32 toolchain to $PATH
 PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
+IDF_PATH="$HOME/esp/esp-idf"
