@@ -9,17 +9,17 @@ URxvt.fading:		0
 ! URxvt.urgentOnBell:	true
 ! URxvt.visualBell:	true
 URxvt.loginShell:	true
-URxvt.saveLines:	50
+URxvt*saveLines:	0
 URxvt.internalBorder:	2
 URxvt.lineSpace:	1
 !URxvt.letterSpace:	-1
 URxvt.intensityStyles:	false
 urxvt*depth: 24
 
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
-URxvt.url-select.launcher:  xdg-open
-URxvt.url-select.underline: true
-URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.perl-ext-common:      default
+!URxvt.url-select.launcher:  xdg-open
+!URxvt.url-select.underline: true
+URxvt.keysym.M-u:           matcher:select
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
 
@@ -28,8 +28,8 @@ URxvt.keysym.M-s:           perl:keyboard-select:search
 !URxvt*boldFont:	xft:Monospace:pixelsize=14
 !URxvt*font:		-Gohu-Gohufont-Medium-R-Normal--14-100-100-100-C-80-ISO10646-1
 !URxvt*boldFont:		-Gohu-Gohufont-Bold-R-Normal--14-100-100-100-C-80-ISO10646-1
-URxvt*font:		xft:Gohu Gohufont:pixelsize=14,xft:Shinonome Gothic:pixelsize=14,xft:og-dcm-emoji:pixelsize=14
-URxvt*boldFont:		xft:Gohu Gohufont:pixelsize=14,xft:Shinonome Gothic:pixelsize=14,xft:og-dcm-emoji:pixelsize=14
+URxvt*font:		xft:GohuFont:pixelsize=14,xft:Shinonome Gothic:pixelsize=14,xft:og-dcm-emoji:pixelsize=14
+URxvt*boldFont:		xft:GohuFont:pixelsize=14,xft:Shinonome Gothic:pixelsize=14,xft:og-dcm-emoji:pixelsize=14
 
 ! Scrollbar
 URxvt.scrollStyle:	rxvt

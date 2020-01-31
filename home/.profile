@@ -17,10 +17,18 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set $PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
 fi
 
 # add ESP32 toolchain to $PATH
 PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
 IDF_PATH="$HOME/esp/esp-idf"
+
+CC65_HOME="$HOME/dev/nes/cc65"
+PATH="$PATH:$CC65_HOME/bin"
+
+SIMULANT_DIR="$HOME/dev/contrib/simulant"
+PATH="$SIMULANT_DIR/bin:$PATH"
+
+PATH="/home/bluraf/.nimble/bin:$PATH"
