@@ -1,10 +1,7 @@
 # ~/.bashrc - bash config file
 
-export WINEARCH='win32'
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
 
 # Current Git branch
 parse_git_branch() {
@@ -21,13 +18,11 @@ usercolor=$colorrst
 
 PS1='[${?}] \[${usercolor}\]\u\[${colorrst}\]!\l@\h:\w$(parse_git_branch) \$ '
 
-
 # Basic aliases
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
 
 # Additional aliases
 alias fixmic="sudo rmmod -f snd_hda_intel && sudo modprobe snd_hda_intel"
@@ -39,5 +34,7 @@ if [[ -x /usr/bin/steam ]]; then
     alias fixsteamrtlocal='find ~/.local/share/Steam/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" -o -name "libgpg-error.so*" \) -print -delete'
 fi
 
-fortune bofh-excuses
+#fortune bofh-excuses
+todo.sh list
 
+eval "$(direnv hook bash)"

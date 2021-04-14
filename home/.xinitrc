@@ -16,4 +16,5 @@ xsetroot -solid "#002B36"
 ~/.fehbg
 
 compton &
-exec i3
+tint2 &
+exec openbox

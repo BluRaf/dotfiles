@@ -1,13 +1,3 @@
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
-
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
-#umask 022
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -17,18 +7,28 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set $PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
+if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# add user AppImage directory to $PATH
+if [ -d "$HOME/bin" ]; then
+    PATH="$PATH:$HOME/bin"
+fi
+
 # add ESP32 toolchain to $PATH
-PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
-IDF_PATH="$HOME/esp/esp-idf"
+# TODO: find a better way to manage cross toolchains
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
+    IDF_PATH="$HOME/esp/esp-idf"
+fi
 
-CC65_HOME="$HOME/dev/nes/cc65"
-PATH="$PATH:$CC65_HOME/bin"
+# add Nimble packages to $PATH
+if [ -d "$HOME/.nimble" ]; then
+    PATH="$PATH:/home/bluraf/.nimble/bin"
+fi
 
-SIMULANT_DIR="$HOME/dev/contrib/simulant"
-PATH="$SIMULANT_DIR/bin:$PATH"
-
-PATH="/home/bluraf/.nimble/bin:$PATH"
+# add Rust packages to $PATH
+if [ -d "$HOME/.cargo" ]; then
+    PATH="$PATH:$HOME/.cargo/bin"
+fi
